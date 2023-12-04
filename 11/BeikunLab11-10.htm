@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<TITLE> Навчальний файл HTML</TITLE>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<SCRIPT>
+var al=0;function podmen()
+{
+var w=document.images[0].src;
+var ch=w.lastIndexOf("/");
+var path=w.substring(0,ch+1);
+if(parent.al==0)
+ {document.images[0].src=path+"crow-wallpaper-2.jpg"; parent.al=1;}
+else
+ {document.images[0].src=path+"voron-crow-ptica-bird-siluet.jpg"; parent.al=0;}
+setTimeout("podmen()","600");
+ }
+setTimeout("podmen()","600");
+</SCRIPT>
+</HEAD>
+<BODY background="crow-wallpaper-2.jpg"> <CENTER>
+<H1><FONT color=Blue>Зміна зображення через задані проміжки
+часу</FONT></H1>
+<IMG height=140 src="voron-crow-ptica-bird-siluet.jpg" width=150 border=1></CENTER></BODY>
+</HTML>
