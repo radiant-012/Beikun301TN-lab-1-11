@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let month = prompt("Введіть номер місяця (від 1 до 12):");
+    let monthName;
+
+    switch (parseInt(month)) {
+        case 1:
+            monthName = "Зима. Січень";
+            break;
+        case 2:
+            monthName = "Зима. Лютий";
+            break;
+        case 3:
+            monthName = "Весна. Березень";
+            break;
+        case 4:
+            monthName = "Весна. Квітень";
+            break;
+        case 5:
+            monthName = "Весна. Травень";
+            break;
+        case 6:
+            monthName = "Літо. Червень";
+            break;
+        case 7:
+            monthName = "Літо. Липень";
+            break;
+        case 8:
+            monthName = "Літо. Серпень";
+            break;
+        case 9:
+            monthName = "Осінь. Вересень";
+            break;
+        case 10:
+            monthName = "Осінь. Жовтень";
+            break;
+        case 11:
+            monthName = "Осінь. Листопад";
+            break;
+        case 12:
+            monthName = "Зима. Грудень";
+            break;
+        default:
+            break;
+    }
+    alert(`${monthName}`);
+	</script>
+</body>
+</html>

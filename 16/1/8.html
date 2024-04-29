@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+  <style>
+    .valid {
+      border: 2px solid green;
+    }
+    .invalid {
+      border: 2px solid red;
+    }
+  </style>
+</head>
+<body>
+ <input type="text" data-length="5">
+  <input type="text" data-length="8">
+  <input type="text" data-length="10">
+
+  <script>
+    var inputs = document.querySelectorAll('input');
+    function checkInputLength() {
+      var requiredLength = parseInt(this.getAttribute('data-length'));
+      if (this.value.length === requiredLength) {
+        this.classList.remove('invalid');
+        this.classList.add('valid');
+      } else {
+        this.classList.remove('valid');
+        this.classList.add('invalid');
+      }
+    }
+    inputs.forEach(function(input) {
+      input.addEventListener('blur', checkInputLength);
+    });
+  </script>
+</body>
+</html>

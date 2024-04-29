@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	  <style>
+    .red {
+      background-color: red;
+    }
+    .green {
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+  <div id="div1">Div 1</div>
+  <div id="div2">Div 2</div>
+  <div id="div3">Div 3</div>
+
+  <script>
+    var divs = document.querySelectorAll('div');
+    var isRed = true;
+
+    // Функція для зміни фону на червоний
+    function changeToRed() {
+      this.classList.add('red');
+      this.classList.remove('green');
+      this.removeEventListener('click', changeToRed);
+      this.addEventListener('click', changeToGreen);
+    }
+
+    // Функція для зміни фону на зелений
+    function changeToGreen() {
+      this.classList.add('green');
+      this.classList.remove('red');
+      this.removeEventListener('click', changeToGreen);
+      this.addEventListener('click', changeToRed);
+    }
+
+    // Додаємо обробник події для кожного div
+    divs.forEach(function(div) {
+      div.addEventListener('click', changeToRed);
+    });
+  </script>
+</body>
+</html>
